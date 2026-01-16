@@ -1,5 +1,3 @@
-use std::result;
-
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -39,6 +37,49 @@ fn add_two_num(
     result.next
 }
 
+// for create linked list 
+fn vec_list(nums:Vec<i32>) -> Option<Box<ListNode>> {
+    let mut head  = None;
+    let mut curr  = &mut head;
+        
+    for val in nums {
+        *curr = Some(Box::new(ListNode::new(val)));
+        curr = &mut curr.as_mut().unwrap().next;
+    }
+    head
+}
+
+// Helper: Print linked list
+fn print_list(mut head:Option<Box<ListNode>>) {
+    while let Some(node) = head {
+        print!("{}",node.val);
+        
+        head = node.next;
+        
+        if head.is_some() {
+            print!( " -> ");
+        }
+    }
+    // println!();
+}
+
 fn main() {
+    let l1  =  vec_list(vec![5,4,3]);
+    let l2 = vec_list(vec![5,6,4]);
+            
+    print!("l1: ");
+    print_list(l1.clone());
+    
+    println!();
+    
+    print!("l2: ");
+    print_list(l2.clone());
+    
+    println!();
+    
+    let result = add_two_num(l1, l2);
+    
+    print!("Res: ");
+    print_list(result);
     
 }
