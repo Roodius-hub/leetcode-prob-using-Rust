@@ -3,9 +3,9 @@ use std::collections::HashSet;
 pub fn contain_duplicate(nums:Vec<i32>) -> bool {
     let mut hashset = HashSet::<i32>::new();
 
-    for i  in 0..nums.len() {
-        if !hashset.contains(&nums[i]){
-            hashset.insert(nums[i]);
+    for i  in nums {
+        if !hashset.contains(&i){
+            hashset.insert(i);
         } else {
             return true
         }
