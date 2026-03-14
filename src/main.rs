@@ -3,4 +3,7 @@
 // include!("Ques/FizzBuzz .rs");
 // include!("Ques/palindrom.rs");  
 // include!("Ques/palindrom_best.rs");
-include!("Ques/valid_parenthesis.rs");
+// include!("Ques/valid_parenthesis.rs");
+// include!("Ques/plus_one.rs");
+// include!("Ques/merge_sorted_array.rs");
+include!("Ques/find_left_most_pivot_idx.rs");
