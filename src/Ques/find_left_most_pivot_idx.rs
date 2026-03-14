@@ -20,7 +20,7 @@ pub fn pivot_index(nums: Vec<i32>) -> i32 {
 }
 
 fn main(){
-    let nums:Vec<i32> = vec![1,7,3,6,5,6];
+    let nums:Vec<i32> = vec![2,1,-1];
     let ans = pivot_index(nums);
     println!("pivot is: {}", ans);
 }
