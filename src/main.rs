@@ -8,4 +8,5 @@
 // include!("Ques/merge_sorted_array.rs");
 // include!("Ques/find_left_most_pivot_idx.rs");
 // include!("Ques/contain_duplicate.rs");
-include!("Ques/single_number.rs");
+// include!("Ques/single_number.rs");
+include!("Ques/anangram.rs");
