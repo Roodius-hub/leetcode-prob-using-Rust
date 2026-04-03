@@ -10,4 +10,6 @@
 // include!("Ques/contain_duplicate.rs");
 // include!("Ques/single_number.rs");
 // include!("Ques/anangram.rs");
-include!("Ques/majority_elements.rs");
+// include!("Ques/majority_elements.rs");
+// include!("Ques/longest_sub_string_without_repeat_char.rs");
+include!("Ques/median_of_two_sorted_array.rs");
