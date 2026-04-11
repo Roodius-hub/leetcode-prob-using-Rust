@@ -6,7 +6,7 @@ pub fn is_palindrom(x:i32) -> bool {
     for i in 0..(size/2) {
         if ls[i] != ls[size-1-i] {
             return false;
-        }
+        }   
     }
         
     true
@@ -15,6 +15,6 @@ pub fn is_palindrom(x:i32) -> bool {
 
 
 fn main() {
-   let ans = is_palindrom(121);
+   let ans = is_palindrom(212);
    println!("{}" ,ans);
 }
