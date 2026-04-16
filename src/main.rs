@@ -13,4 +13,6 @@
 // include!("Ques/majority_elements.rs");
 // include!("Ques/longest_sub_string_without_repeat_char.rs");
 // include!("Ques/median_of_two_sorted_array.rs");
-include!("Ques/longest_palindromic_string.rs");
+// include!("Ques/longest_palindromic_string.rs");
+// include!("Ques/zigg_zagg_conversion.rs");
+include!("Ques/reverse_integer.rs");
