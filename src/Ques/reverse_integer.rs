@@ -7,20 +7,29 @@ pub fn reverse(x: i32) -> i32 {
     // for c in into_chars {
     //     println!("{}", c);
     // }      
+    let mut is_negative = into_chars.first() == Some(&'-');
+    let mut num = match into_chars.into_iter().filter(|&c| c != '-').rev().collect::<String>().parse::<i64>()
+    {
+        Ok(n) => n,
+        Err(_) =>  0
+    };
 
-    if into_chars[0 as usize] == '-' {
-        println!("Number are Negative");
-        return -1
+
+    if is_negative {
+        num = -num;
+    } 
+
+    let result:i32 = if num > i32::MAX as i64 || num < i32::MIN as i64 {
+        0 as i32
     } else {
-        let num = (into_chars.reverse().join()).parse::<i32>().expect("Not a Number");
-        
-    }
-
-    3
+        num as i32
+    };
+    result
 }
 
 fn main() {
     println!("Hi there from reverse integer");
     let x = 123;
     let ans = reverse(x);
+    println!("{}", ans);
 }
