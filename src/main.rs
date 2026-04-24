@@ -15,4 +15,7 @@
 // include!("Ques/median_of_two_sorted_array.rs");
 // include!("Ques/longest_palindromic_string.rs");
 // include!("Ques/zigg_zagg_conversion.rs");
-include!("Ques/reverse_integer.rs");
+// include!("Ques/reverse_integer.rs");
+// include!("Ques/string_to_integer.rs");
+// include!("Ques/Regular_Expression_Matching.rs");
+include!("Ques/Regular_Expression_Matching_better.rs");
