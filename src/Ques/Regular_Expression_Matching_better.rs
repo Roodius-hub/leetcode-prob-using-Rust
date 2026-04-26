@@ -15,10 +15,16 @@ pub fn is_match(s: String, p: String) -> bool {
             i == s.len()
         } else {
             let first_match = i < s.len() && (s[i] == p[j] || p[j] == '.');
-
-            
-        }
-
+            //skip char* or not
+            if j + 1 < p.len() && p[j+1] == '*' {
+                dfs(i, j+2, s, p ,dp) || dfs(i+1, j, s, p, dp)
+            } else {
+                first_match && dfs(i + 1, j + 1, s, p , dp)
+            }
+ 
+        };
+        dp[i][j] = Some(ans);
+        ans
     }
 
     dfs(0, 0, &s, &p, &mut dp)
