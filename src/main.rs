@@ -21,4 +21,6 @@
 // include!("Ques/Regular_Expression_Matching_better.rs");
 // include!("Ques/Inetger_to_roman.rs");
 // include!("Ques/roman_to_inetger.rs");
-include!("Ques/3sum.rs");
+// include!("Ques/3sum.rs");
+// include!("Ques/new.rs");
+include!("Ques/3sum_closet.rs");
