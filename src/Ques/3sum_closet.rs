@@ -24,12 +24,13 @@ use std::vec;
 
 pub fn three_sum_closet(mut nums: Vec<i32>, target: i32) -> i32 {
     // sorting 
-    nums.sort();    
+    nums.sort_unstable();    
     let n:usize = nums.len();
-    let mut result:Vec<i32> = vec![];
 
     let mut currentSum = 0;
-    for i in 0..nums.len() {
+    let mut ans = nums[0] + nums[1] + nums[2];
+    
+    for i in 0..n-2 {
         let mut j:usize = i + 1;
         let mut k:usize = n - 1;
 
@@ -41,18 +42,23 @@ pub fn three_sum_closet(mut nums: Vec<i32>, target: i32) -> i32 {
                 return currentSum    
             }
 
+            if (currentSum - target).abs() <  (ans - target).abs() {
+                ans = currentSum;
+            } 
+
+            if currentSum > target {
+                k -= 1;
+            } else {
+                j += 1;
+            }
             
-
         }
-
     }
-
-
-    1
+    ans
 } 
 
 fn main(){
     let nums = vec![-1,2,1,-4];
-    three_sum_closet(nums, 1);
-
+    let ans = three_sum_closet(nums, 1);
+    println!("closetSum: {}", ans)
 }
