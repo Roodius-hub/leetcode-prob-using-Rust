@@ -48,6 +48,6 @@ pub fn four_sum(mut nums: Vec<i64>, target: i64) -> Vec<Vec<i64>> {
 fn main() {
     let nums = vec![1,0,-1,0,-2,2];
     
-    let ans = four_sum(nums, 0);
+    let ans = four_sum(nums, 0);        
     println!("vector: {:?}", ans);
 }

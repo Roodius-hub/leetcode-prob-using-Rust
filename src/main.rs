@@ -25,4 +25,6 @@
 // include!("Ques/new.rs");
 // include!("Ques/3sum_closet.rs");
 // include!("Ques/Letter_Combinations_ofaPhone_Number.rs");
-include!("Ques/4sum.rs");
+// include!("Ques/4sum.rs");
+// include!("Ques/Remove_Nth_Node_From_End_of_List.rs");
+include!("Ques/Merge_Two_Sorted_Lists.rs");
