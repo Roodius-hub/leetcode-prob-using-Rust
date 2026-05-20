@@ -1,14 +1,14 @@
 use std::cmp::max;
 
 pub fn max_sub_array(nums: Vec<i32>) -> i32 {
-    let mut currentSum = 0;
+    let mut current_sum = 0;
     let mut max_sum = std::i32::MIN;
 
     for val in nums {
-        currentSum  += val;
-        max_sum = max(currentSum, max_sum);
-        if currentSum < 0 {
-            currentSum = 0;
+        current_sum  += val;
+        max_sum = max(current_sum, max_sum);
+        if current_sum < 0 {
+            current_sum = 0;
         }
     }
     max_sum
