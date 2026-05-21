@@ -30,23 +30,23 @@ pub fn longest_sub_string_without_repeat_char(strr:String) -> i32 {
 
     let str_bytes = strr.as_bytes(); // convert in u8
 
-    let mut left_pointer:usize = 0;
+    let mut j:usize = 0;
     // let mut right_pointer:usize = 0; we dont need it now 
 
     let mut vis:Vec<bool> = vec![false; 256];  // for all character
 
-   for right_pointer in 0..str_bytes.len() {
+   for i in 0..str_bytes.len() {
 
-        while vis[str_bytes[right_pointer] as usize] == true {
+        while vis[str_bytes[i] as usize] == true {
 
-        vis[str_bytes[left_pointer] as usize] = false;
+        vis[str_bytes[j] as usize] = false;
 
-        left_pointer += 1  as usize;
+        j += 1  as usize;
     }
 
-    vis[str_bytes[right_pointer] as usize] = true;
+    vis[str_bytes[i] as usize] = true;
 
-    res = cmp::max(res, right_pointer - left_pointer + 1);
+    res = cmp::max(res, i - j + 1);
     // right_pointer += 1 as usize;
 
     }
