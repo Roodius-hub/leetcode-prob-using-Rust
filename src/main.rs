@@ -31,4 +31,6 @@
 // include!("Ques/Product_of_Array_Except_Self.rs");
 // include!("Ques/Maximum_Subarray.rs");
 // include!("Ques/Subarray_Sum_Equals_K.rs");
-include!("Ques/Minimum_Window_Substring.rs");
+// include!("Ques/Minimum_Window_Substring.rs");
+// include!("Ques/Merge_two_sorted_list.rs");
+include!("Ques/Merge_two_sorted_list_another_way.rs");
