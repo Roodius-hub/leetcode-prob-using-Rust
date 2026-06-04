@@ -17,9 +17,9 @@ impl ListNode {
     }
 }
 
-// pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
-            
-// }
+pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
+               
+}
 
 pub fn make_list(nums:Vec<i32>) -> Option<Box<ListNode>> {
     let mut head = None;
@@ -34,6 +34,7 @@ pub fn make_list(nums:Vec<i32>) -> Option<Box<ListNode>> {
 
 fn main(){
     let nums:Vec<i32> = vec![1,2,2,4,5,6,5];
-    let ans:Option<Box<ListNode>> = make_list(nums);
+    let lists:Vec<Option<Box<ListNode>>> = vec![make_list(vec![1,2,3,4,5]),make_list(vec![2,3,4,5,6,6])];
+    let  ans  = merge_k_lists(lists);
     println!("{:?}", ans);
 }
