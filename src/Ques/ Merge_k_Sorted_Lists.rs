@@ -18,7 +18,19 @@ impl ListNode {
 }
 
 pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
-               
+    let mut vals = Vec::new();
+
+    for mut list in lists {
+        while let Some(node) = list {
+            vals.push(node.val);
+            list = node.next;
+        }
+    }
+
+    vals.sort();
+
+    make_list(vals)
+
 }
 
 pub fn make_list(nums:Vec<i32>) -> Option<Box<ListNode>> {
@@ -36,5 +48,12 @@ fn main(){
     let nums:Vec<i32> = vec![1,2,2,4,5,6,5];
     let lists:Vec<Option<Box<ListNode>>> = vec![make_list(vec![1,2,3,4,5]),make_list(vec![2,3,4,5,6,6])];
     let  ans  = merge_k_lists(lists);
-    println!("{:?}", ans);
+    
+    let mut curr = ans.as_ref();
+
+    while let Some(node) = curr {
+        print!(" {} ", node.val);
+        curr = node.next.as_ref();
+    }
+
 }
