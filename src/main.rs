@@ -33,4 +33,6 @@
 // include!("Ques/Subarray_Sum_Equals_K.rs");
 // include!("Ques/Minimum_Window_Substring.rs");
 // include!("Ques/Merge_two_sorted_list.rs");
-include!("Ques/Merge_two_sorted_list_another_way.rs");
+// include!("Ques/Merge_two_sorted_list_another_way.rs");
+// include!("Ques/Generate_Parentheses.rs");
+include!("Ques/ Merge_k_Sorted_Lists.rs");
