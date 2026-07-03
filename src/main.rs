@@ -35,4 +35,7 @@
 // include!("Ques/Merge_two_sorted_list.rs");
 // include!("Ques/Merge_two_sorted_list_another_way.rs");
 // include!("Ques/Generate_Parentheses.rs");
-include!("Ques/ Merge_k_Sorted_Lists.rs");
+// include!("Ques/ Merge_k_Sorted_Lists.rs");
+// include!("Choosed/Best_Time_to_Buy_and_Sell_Stock.rs");
+// include!("Choosed/Product_of_Array_Except_Self.rs");
+include!("Ques/Remove_duplicates.rs");
