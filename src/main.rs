@@ -39,4 +39,5 @@
 // include!("Choosed/Best_Time_to_Buy_and_Sell_Stock.rs");
 // include!("Choosed/Product_of_Array_Except_Self.rs");
 // include!("Ques/Remove_duplicates.rs");
-include!("Ques/ Remove_Element.rs");
+// include!("Ques/ Remove_Element.rs");
+include!("Ques/Find theIndexoftheFirstOccurrenceinaString.rs");
