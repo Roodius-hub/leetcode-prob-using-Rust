@@ -40,4 +40,5 @@
 // include!("Choosed/Product_of_Array_Except_Self.rs");
 // include!("Ques/Remove_duplicates.rs");
 // include!("Ques/ Remove_Element.rs");
-include!("Ques/Find theIndexoftheFirstOccurrenceinaString.rs");
+// include!("Ques/Find theIndexoftheFirstOccurrenceinaString.rs");
+include!("Ques/DivideTwoIntegers.rs");
