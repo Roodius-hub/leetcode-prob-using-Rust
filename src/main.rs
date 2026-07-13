@@ -41,4 +41,5 @@
 // include!("Ques/Remove_duplicates.rs");
 // include!("Ques/ Remove_Element.rs");
 // include!("Ques/Find theIndexoftheFirstOccurrenceinaString.rs");
-include!("Ques/DivideTwoIntegers.rs");
+// include!("Ques/DivideTwoIntegers.rs");
+include!("Ques/30.rs");
