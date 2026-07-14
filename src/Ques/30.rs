@@ -1,4 +1,4 @@
-use std::{collections::HashMap, hash::Hash};
+use std::{collections::HashMap};
 
 
 fn generate_permutation(s:String,words:Vec<String>) -> Vec<i32> {
@@ -17,33 +17,33 @@ fn generate_permutation(s:String,words:Vec<String>) -> Vec<i32> {
     }
 
     for offset in 0..wordsize {
-    let mut start = offset;
+        let mut start = offset;
 
-    while start + windowsize <= n {
-        let mut curr = freq.clone();
-        let mut matched = true;
+        while start + windowsize <= n {
+            let mut curr = freq.clone();
+            let mut matched = true;
+            
+            for j in 0..m {
+                let left = start + j * wordsize;
+                let right = left + wordsize;
 
-        for j in 0..m {
-            let left = start + j * wordsize;
-            let right = left + wordsize;
+                let currword = &s[left..right];
 
-            let currword = &s[left..right];
+                if !curr.contains_key(currword) || curr[currword] == 0 {
+                    matched = false;
+                    break;
+                }
 
-            if !curr.contains_key(currword) || curr[currword] == 0 {
-                matched = false;
-                break;
+                *curr.entry(currword.to_string()).or_insert(0) -= 1;
             }
 
-            *curr.entry(currword.to_string()).or_insert(0) -= 1;
-        }
+            if matched {
+                ans.push(start as i32);
+            }
 
-        if matched {
-            ans.push(start as i32);
+            start += wordsize;
         }
-
-        start += wordsize;
     }
-}
     ans
 }
 

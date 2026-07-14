@@ -1,7 +1,7 @@
 // include!("Ques/Add_two_Num.rs");
 // include!("Ques/top_k_elements_fr.rs");
 // include!("Ques/FizzBuzz .rs");
-// include!("Ques/palindrom.rs");  
+// include!("Ques/palindrom.rs");
 // include!("Ques/palindrom_best.rs");
 // include!("Ques/valid_parenthesis.rs");
 // include!("Ques/plus_one.rs");
@@ -42,4 +42,5 @@
 // include!("Ques/ Remove_Element.rs");
 // include!("Ques/Find theIndexoftheFirstOccurrenceinaString.rs");
 // include!("Ques/DivideTwoIntegers.rs");
-include!("Ques/30.rs");
+// include!("Ques/30.rs");
+include!("Ques/31.rs");
