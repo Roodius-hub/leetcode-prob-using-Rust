@@ -43,4 +43,5 @@
 // include!("Ques/Find theIndexoftheFirstOccurrenceinaString.rs");
 // include!("Ques/DivideTwoIntegers.rs");
 // include!("Ques/30.rs");
-include!("Ques/31.rs");
+// include!("Ques/31.rs");
+include!("company/1.rs");
