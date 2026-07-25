@@ -34,16 +34,18 @@ pub fn max_product(nums:Vec<i32>) -> i32 {
         let num = nums[i];
         let temp_max = max_ending;  
 
+        // max ending 
         max_ending = std::cmp::max(
             num, std::cmp::max(max_ending * num, min_ending * num)
         );
 
+        // mininmum ending
         min_ending = std::cmp::min(
             num, std::cmp::min(temp_max * num, min_ending * num)
         );
 
+        // comparision 
         max_prod = std::cmp::max(max_prod, max_ending);
-        
     }
     max_prod
 }

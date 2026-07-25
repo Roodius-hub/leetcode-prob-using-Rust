@@ -1,8 +1,11 @@
 
 
 pub fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-    let n = intervals.len();
+    if intervals.is_empty() {
+            return Vec::new();
+        }
     
+    let n = intervals.len();    
     let mut ans:Vec<Vec<i32>> = Vec::new();
 
     intervals.sort();
@@ -32,7 +35,8 @@ pub fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
 
 
 fn main() {
-    let intervals:Vec<Vec<i32>> = vec![vec![1,3],vec![2,6],vec![8,10],vec![15,18]];
+    // let intervals:Vec<Vec<i32>> = vec![vec![1,3],vec![2,6],vec![8,10],vec![15,18]];
+    let intervals:Vec<Vec<i32>> = vec![vec![1,4] ,vec![4,5]];
     let ans = merge(intervals);
 
     print!("{:#?}", ans)
