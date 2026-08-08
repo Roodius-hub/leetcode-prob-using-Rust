@@ -3,7 +3,7 @@ use std::collections::HashMap;
 
 pub fn subarray_sum(nums: Vec<i32>, k: i32) -> i32 {
     let n = nums.len();
-    let mut map:HashMap<i32, i32> = HashMap::new();
+    let mut map:HashMap<i32, i32> = HashMap::with_capacity(nums.len() + 1);
     
     map.insert(0 ,1);
     
@@ -12,18 +12,18 @@ pub fn subarray_sum(nums: Vec<i32>, k: i32) -> i32 {
     for i in 0..n {
        sum += nums[i];
 
-       if map.get(&(sum - k)).is_some() {
-           count += 1;
+       if let Some(value) = map.get(&(sum - k)) {
+           count += value;
        }
-
-       *map.entry(i as i32).or_insert(0) += 1;
-       
+       *map.entry(sum).or_insert(0) += 1;
     }
-
     count
 }
 
 
 fn main() {
-    
+    let nums = vec![1,1,1];
+    let ans = subarray_sum(nums, 2);
+
+    println!("count: {}", ans);
 }
