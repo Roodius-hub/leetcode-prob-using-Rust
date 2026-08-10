@@ -56,12 +56,45 @@
 //     count
 // }
 
-pub fn find_pairs(mut nums: Vec<i32>, k: i32) -> i32 {
+use std::collections::{HashMap, HashSet};
 
+pub fn find_pairs(nums: Vec<i32>, k: i32) -> i32 {
+
+    if k < 0 {
+        return 0;
+    }
+
+    if k == 0 {
+        let mut seen_new= HashMap::new();
+
+        for num in nums {
+            *seen_new.entry(num).or_insert(0) += 1;
+        }
+        let mut count = 0;
+
+        for value in seen_new.values() {
+            if * value >=2 {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    
+    let seen:HashSet<i32> = nums.iter().copied().collect();
+    
+    let mut count = 0;
+
+    for &num in &seen {
+        if seen.contains(&(num + k)) {
+            count += 1;
+        }
+    }
+    count
+}
 
 fn main() {
-    let nums = vec![3, 1, 4, 1, 5];
-    let ans = find_pairs(nums, 2);
+    let nums = vec![1,1,1,2,2];
+    let ans = find_pairs(nums, 0);
 
     println!("{}", ans);
 }
