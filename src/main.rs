@@ -46,5 +46,5 @@
 // include!("Ques/31.rs");
 // include!("company/1.rs");
 // include!("code-nation/t-shape.rs");
-// include!("company/3.rs");
-include!("data_structure/hashmap_usage.rs");
+include!("company/5.rs");
+// include!("data_structure/hashmap_usage.rs");

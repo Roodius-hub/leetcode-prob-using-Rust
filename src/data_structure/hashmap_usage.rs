@@ -15,6 +15,16 @@ fn main() {
     map.insert("osvdsman", 1223);
     map.insert("ossdvman", 1223);
 
+    if let Some(value) = map.get(&"osman") {
+        println!("{}", value);
+    }
+
+    if map.contains_key(&"osman") {
+        println!("Key Exist");
+    }
+
+        
+    
     println!("{:?}", map);
     
 }   
