@@ -18,7 +18,7 @@ impl EncodeDecodeString {
         let mut result:String = String::new();
         for i in 0..n {
             let len = s[i].len();
-            println!("length: {}", len);
+            // println!("length: {}", len);
 
             result.push_str(&len.to_string());
             result.push('#');
@@ -56,5 +56,9 @@ fn main() {
     let mut encodedecodestring = EncodeDecodeString::new();
 
     let ans = encodedecodestring.decode(String::from("5#hello5#world"));
-    println!("{:?}", ans);
+    println!("decoded string into vector: {:?}", ans);
+
+    let ans_string = encodedecodestring.encode(ans);
+    println!("encoded vector of strings in Single String: {}", ans_string);
+
 }
