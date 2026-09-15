@@ -23,7 +23,7 @@ impl EncodeDecodeString {
             result.push_str(&len.to_string());
             result.push('#');
             result.push_str(&s[i]);
-        }
+        } // -> O(n) O(n)
         result
     }
 
@@ -45,7 +45,7 @@ impl EncodeDecodeString {
             let word = String::from_utf8(bytes[i..i + length].to_vec()).unwrap();
             result.push(word);
             i += length
-        }
+        } // -> O(n)
         result
     }
 
