@@ -8,7 +8,7 @@ pub fn my_atoi(s: String) -> i32 {
     let into_byte:Vec<char> = s.chars().collect();
     let n = into_byte.len();
     let mut i = 0;
-    let mut result = 0;
+    // let mut result = 0;
     let flag = 2 * 31 -1;
 
     
@@ -35,15 +35,25 @@ pub fn my_atoi(s: String) -> i32 {
     let overflowLIMIT = std::i32::MAX / 10;
 
     while i < n {
-        if into_byte[i].is_digit(10) {
-            
+        if !into_byte[i].is_digit(10) {
+            break;
         }
-    }
 
-    1
+        let digit = into_byte[i] as u8 - b'0';
+
+        if (result > overflowLIMIT) || (result == overflowLIMIT && digit > 7) {
+            if sign == 1 {return std::i32::MIN } else {return std::i32::MAX};
+        }
+        result = result * 10 + digit as i32;
+        i += 1;
+    }   
+
+    result * sign
 
 }
 
 fn main() {
-
+    let s = String::from("-234erg");
+    let ans = my_atoi(s);
+    println!("{}", ans);
 }
