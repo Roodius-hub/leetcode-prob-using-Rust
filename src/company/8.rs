@@ -42,8 +42,9 @@ pub fn my_atoi(s: String) -> i32 {
         let digit = into_byte[i] as u8 - b'0';
 
         if (result > overflowLIMIT) || (result == overflowLIMIT && digit > 7) {
-            if sign == 1 {return std::i32::MIN } else {return std::i32::MAX};
+            if sign == 1 {return std::i32::MAX } else {return std::i32::MIN};
         }
+
         result = result * 10 + digit as i32;
         i += 1;
     }   
